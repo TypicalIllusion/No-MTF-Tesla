@@ -4,6 +4,8 @@ Makes MTF AND Scientists not trigger tesla gates.
 | Name | Type | Description | Default |
 | --- | --- | --- | --- |
 | `is_enabled` | bool | Toggles the plugin | true |
+| `ScientistTesla` | bool | Do scientists trigger tesla gates? | false |
+| `MTFTesla` | bool | Do MTF trigger tesla gates? | false |
 
 
 This plugin requires [EXILED](https://github.com/galaxy119/EXILED/releases/tag/2.1.19).
