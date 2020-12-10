@@ -21,14 +21,18 @@ namespace No_MTF_Tesla
 
         public static bool enabledInGame = true;
 
+        public static NMT Singleton;
+
         public void RegisterEvents()
         {
             PPlayer.TriggeringTesla += player.TriggeringTeslaGate;
+            Singleton = this;
         }
         public void UnregisterEvents()
         {
             PPlayer.TriggeringTesla -= player.TriggeringTeslaGate;
             player = null;
+            Singleton = null;
         }
 
         public override void OnEnabled()
