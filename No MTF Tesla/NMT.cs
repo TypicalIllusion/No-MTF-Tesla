@@ -20,26 +20,26 @@ namespace No_MTF_Tesla
 
         public void RegisterEvents()
         {
-			player = new Handlers.Player();
-			
+            player = new Handlers.Player();
+
             PPlayer.TriggeringTesla += player.TriggeringTeslaGate;
         }
         public void UnregisterEvents()
         {
             PPlayer.TriggeringTesla -= player.TriggeringTeslaGate;
-			
+
             player = null;
         }
 
         public override void OnEnabled()
         {
             RegisterEvents();
-			base.OnEnabled();
+            base.OnEnabled();
         }
         public override void OnDisabled()
         {
             UnregisterEvents();
-			base.OnDisabled();
+            base.OnDisabled();
         }
     }
 }
