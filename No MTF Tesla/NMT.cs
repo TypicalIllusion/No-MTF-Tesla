@@ -16,11 +16,7 @@ namespace No_MTF_Tesla
         public override Version RequiredExiledVersion { get; } = new Version(2, 1, 19);
         public override string Prefix { get; } = "NMT";
 
-        public static NMT Instance;
-
         public override PluginPriority Priority { get; } = PluginPriority.Low;
-
-        public static NMT Singleton;
 
 
         public static bool enabledInGame = true;
@@ -28,13 +24,11 @@ namespace No_MTF_Tesla
         public void RegisterEvents()
         {
             PPlayer.TriggeringTesla += player.TriggeringTeslaGate;
-            Singleton = this;
         }
         public void UnregisterEvents()
         {
             PPlayer.TriggeringTesla -= player.TriggeringTeslaGate;
             player = null;
-            Singleton = null;
         }
 
         public override void OnEnabled()
