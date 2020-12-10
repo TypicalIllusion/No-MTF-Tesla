@@ -1,9 +1,5 @@
 # No MTF Tesla
-<<<<<<< HEAD
-A plugin the removes and teleports bodies from the pocket dimension to heavy containment
-=======
 Makes MTF AND Scientists not trigger tesla gates.
->>>>>>> 6b9aa451b0112665a68208fe5190b6bed6cf973f
 # Config Options
 | Name | Type | Description | Default |
 | --- | --- | --- | --- |
