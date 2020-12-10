@@ -6,10 +6,7 @@ namespace No_MTF_Tesla.Handlers
     {
         public void TriggeringTeslaGate(TriggeringTeslaEventArgs ev)
         {
-            if(ev.Player.Team == Team.MTF || ev.Player.Team == Team.RSC)
-            {
-                ev.IsTriggerable = false;
-            }
+            ev.IsTriggerable = !(ev.Player.Team == Team.MTF || ev.Player.Team == Team.RSC);
         }
     }
 }
