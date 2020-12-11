@@ -7,7 +7,7 @@ namespace No_MTF_Tesla.Handlers
     {
         public void TriggeringTeslaGate(TriggeringTeslaEventArgs ev)
         {
-            ev.IsTriggerable = !((Singleton.Config.MTFTesla && ev.Player.Team == Team.MTF) || (Singleton.Config.ScientistTesla && ev.Player.Team == Team.RSC));
+            ev.IsTriggerable = ((Singleton.Config.MTFTesla && ev.Player.Team == Team.MTF) || (Singleton.Config.ScientistTesla && ev.Player.Team == Team.RSC)) ? false : ev.IsTriggerable;
         }
     }
 }
